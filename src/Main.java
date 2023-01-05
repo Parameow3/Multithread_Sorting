@@ -1,14 +1,27 @@
 import java.util.Date;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        int[] arr = {7, 12, 19, 3, 18, 4, 2, 6, 15, 8};
-        int n = arr.length;
-
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Input size of arr: ");
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+        Random random = new Random();
+        for (int i = 0; i < n; i++){
+            arr[i] = random.nextInt(10000);
+        }
+
+        QuickSort.printArr(arr, n);
+
+
+
+
+
         int choice;
 
         System.out.println("QuickSort:");
